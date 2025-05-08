@@ -1,0 +1,30 @@
+apiVersion: v1
+entries:
+  trainticket:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-05-08T16:19:14.97525133Z"
+    dependencies:
+    - condition: skywalking.enabled
+      name: skywalking-helm
+      repository: oci://registry-1.docker.io/apache
+      version: 4.5.0
+    - condition: skywalking.enabled
+      name: postgresql
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 15.1.4
+    - name: rabbitmq
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 15.4.0
+    - condition: loadgenerator.enabled
+      name: loadgenerator
+      repository: https://cuhk-se-group.github.io/loadgenerator
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: 684c4619f703fa7799423a8988205a6e9c0df593381d30091bb2801f5009769d
+    name: trainticket
+    type: application
+    urls:
+    - https://cuhk-se-group.github.io/train-ticket/trainticket-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-05-08T16:19:14.958985816Z"
